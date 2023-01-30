@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // for double-checking if the above general-rule didn't apply for Javascript
+  },
+  // ------prettier rules------ //
+  "prettier.trailingComma": "es5",
+  "prettier.singleQuote": false,
+  "prettier.arrowParens": "always",
+
+  "css.lint.unknownAtRules": "ignore", // ignore unknown rules like: "@tailwind"
+  "prettier.printWidth": 80,
+
+  // JSX
+  "prettier.jsxBracketSameLine": false
+}
