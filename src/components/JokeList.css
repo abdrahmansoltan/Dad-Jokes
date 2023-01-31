@@ -45,8 +45,40 @@
   background: white;
   align-self: center;
   width: 70%;
-  overflow: scroll;
+  overflow-y: scroll;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+}
+
+.JokeList-spinner {
+  color: white;
+  text-align: center;
+}
+
+.JokeList-getmore {
+  font-size: 1.5rem;
+  width: 50%;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: 700;
+  margin: 2rem;
+  border: none;
+  word-spacing: 0.8rem;
+  cursor: pointer;
+  transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  background: linear-gradient(
+    135deg,
+    rgba(179, 229, 252, 1) 0%,
+    rgba(179, 229, 252, 1) 50%,
+    rgba(240, 98, 146, 1) 50%,
+    rgba(240, 98, 146, 1) 100%
+  );
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+}
+
+.JokeList-getmore:hover {
+  word-spacing: 1.2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes shake-slow {
