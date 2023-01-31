@@ -20,7 +20,9 @@ class JokeList extends Component {
 
   componentDidMount() {
     // check if jokes parsed from localStorage first before getting new jokes
-    if (this.state.jokes.length === 0) this.getJokes();
+    if (this.state.jokes.length === 0) {
+      this.setState({ loading: true }, this.getJokes);
+    }
   }
   async getJokes() {
     try {
@@ -41,7 +43,9 @@ class JokeList extends Component {
       this.setState(
         (prevState) => ({
           loading: false,
-          jokes: [...prevState.jokes, ...jokes].sort((a, b) => b.votes - a.votes), // add new jokes and not replace old jokes
+          jokes: [...prevState.jokes, ...jokes].sort(
+            (a, b) => b.votes - a.votes
+          ), // add new jokes and not replace old jokes
         }),
         // setState callback function
         () =>
