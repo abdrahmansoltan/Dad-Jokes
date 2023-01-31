@@ -62,7 +62,21 @@ class JokeList extends Component {
     );
   }
 
+  handleClick = () => {
+    this.setState({ loading: true }, this.getJokes);
+  };
+
   render() {
+    if (this.state.loading) {
+      return (
+        <div className='JokeList-spinner'>
+          <i className='far fa-8x fa-laugh fa-spin' />
+          <h1 className='JokeList-title'>Loading...</h1>
+        </div>
+      );
+    }
+
+    // else if not loading
     return (
       <div className='JokeList'>
         <div className='JokeList-sidebar'>
