@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# Dad Jokes App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div id="top"></div>
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Font-Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-In the project directory, you can run:
+<!-- PROJECT LOGO -->
+<div align="center">
+  <br>
+  <a href="https://dad-jokes-flax.vercel.app/">
+      <img src="./public/logo512.png" alt="Logo" height="50" >
+    </a>
+  <br>
+  <br>
 
-### `npm start`
+  <p align="center">
+  <a href="https://dad-jokes-flax.vercel.app/">View Demo</a>
+    ·
+    <a href="https://github.com/abdrahmansoltan/Dad-Jokes/issues">Report Bug</a>
+  </p>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#ports-and-endpoints">Ports and EndPoints</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+  </ol>
+</details>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- ABOUT THE PROJECT -->
 
-### `npm test`
+## About The Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React App that lets people view and vote on cheesy jokes from [icanhazdadjoke](https://icanhazdadjoke.com/) API
 
-### `npm run build`
+![Preview](./src/assets/preview.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- List jokes fetched from [icanhazdadjoke](https://icanhazdadjoke.com/) API, along with:
+  - "vot-up" Button
+  - "vot-down" Button
+  - net score for each joke
+- User can vote and net score should update
+- Should show loading state when loading jokes
+- Should show the jokes sorted by net score, and update this as the scores changes on each fetch
+- Should show dynamic vote-border-color and emoji based on joke net vote score
+- Should persist the list of jokes in local storage
+  - > When user visit the app, it should show saved jokes, rather than fetching new jokes, However the user should still be able to generate new jokes via the "New Jokes" button, and these new jokes should update the ones in local storage.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project require some perquisites and dependencies to be installed, you can view it online using this [demo](https://dad-jokes-flax.vercel.app/). or you can find the instructions below:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> To get a local copy, follow these simple steps :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation
 
-## Learn More
+#### installing Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```sh
+   git clone https://github.com/abdrahmansoltan/Dad-Jokes.git
+   ```
 
-### Code Splitting
+2. go to project folder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```sh
+   cd dad-jokes
+   ```
 
-### Analyzing the Bundle Size
+3. install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npm install
+   ```
 
-### Making a Progressive Web App
+4. Run development server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```sh
+   npm start
+   ```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Ports and EndPoints
 
-### Deployment
+#### Ports
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- FrontEnd Development Server runs on port `3000`
 
-### `npm run build` fails to minify
+#### API endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- joke: [https://icanhazdadjoke.com/](https://icanhazdadjoke.com/) [GET]
+  - headers: `"application/json"`
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
