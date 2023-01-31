@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
+import "./JokeList.css";
 
 class JokeList extends Component {
   static defaultProps = {
