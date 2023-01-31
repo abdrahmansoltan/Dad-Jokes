@@ -41,7 +41,7 @@ class JokeList extends Component {
       this.setState(
         (prevState) => ({
           loading: false,
-          jokes: [...prevState.jokes, ...jokes], // add new jokes and not replace old jokes
+          jokes: [...prevState.jokes, ...jokes].sort((a, b) => b.votes - a.votes), // add new jokes and not replace old jokes
         }),
         // setState callback function
         () =>
